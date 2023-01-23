@@ -24,8 +24,7 @@ Folder structure:
                     movie/
            metadata/      rating/
 
-
-    API Hanler
+    API Handler
         |
     Business logic (controller)
         |
@@ -33,9 +32,12 @@ Folder structure:
         |
         DB
 
-
-    • controller: Business logic
-    • gateway: Logic for interacting with other services
     • handler: API handlers
+    • gateway: Logic for interacting with other services
+    • controller: Business logic
     • repository: Database logic
 
+ All code that we are not going to export will be stored in the internal directory and this will include most of our applications.
+
+ The exported structures will reside in the pkg directory.
+ 
