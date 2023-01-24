@@ -41,3 +41,65 @@ Folder structure:
 
  The exported structures will reside in the pkg directory.
  
+Detailed services structure:
+
+  movieexample.com/
+
+    metadata/                                               :8081
+      cmd/
+        main.go
+      internal/
+        controller/
+          metadata/
+            controller.go
+          handler/
+            http/
+              http.go
+          repository/
+            memory/
+              memory.go
+            error.go
+      pkg/
+        model/
+          metadata.go
+
+    movie/                                                  :8083
+      cmd/
+        main.go
+      internal/
+        controller/
+          movie/
+            controller.go
+        gateway/
+          metadata/
+            http/
+              metadata.go
+          rating/
+            http/
+              rating.go
+          error.go
+        handler/
+          http/
+            http.go
+      pkg/
+        model/
+          movie.go
+
+    rating/                                                 :8082
+      cmd/
+        main.go
+      internal/
+        controller/
+          rating/
+            controller.go
+        handler/
+          http/
+            http.go
+        repository/
+          memory/
+            memory.go
+          error.go
+      pkg/
+        model/
+          rating.go
+
