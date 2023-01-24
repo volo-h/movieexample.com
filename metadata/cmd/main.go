@@ -5,11 +5,10 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"net"
 	"time"
+	"net"
 
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/reflection"
 	"movieexample.com/gen"
 	"movieexample.com/metadata/internal/controller/metadata"
 	grpchandler "movieexample.com/metadata/internal/handler/grpc"
@@ -51,7 +50,6 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	srv := grpc.NewServer()
-	reflection.Register(srv)
 	gen.RegisterMetadataServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {
 		panic(err)

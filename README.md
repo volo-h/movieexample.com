@@ -188,3 +188,10 @@ For an application developer, this means doing more nil checks across all applic
 
 add some mapping logic to translate the internal data structures and their generated counterparts.
 
+Message broker:
+• At-least-once: The message gets delivered at least once, but may be delivered multiple times in case of failures.
+• Exactly-once: The message broker guarantees that the message gets delivered and it will be delivered exactly once.
+• At-most-once: The message can be delivered 0 or 1 time.
+
+Apache Kafka:
+Producer ---> Topic <--- Consumer
