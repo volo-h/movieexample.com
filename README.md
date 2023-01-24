@@ -129,3 +129,26 @@ go run movie/cmd/main.go
 http://localhost:8500/
 
 go run *.go --port <PORT>
+
+Protocol Buffers format
+
+```shell
+  go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+  export PATH="$PATH:$(go env GOPATH)/bin"
+
+  protoc -I=api --go_out=. movie.proto
+```
+
+serializing data --------> 
+      deserialized data  <--------------
+
+ecoding ------->
+       decoding <-----------
+
+go mod tidy
+
+cd cmd/sizecompare/
+
+go run *.go
+go test -bench=.
+
