@@ -159,3 +159,32 @@ go run *.go
 ```shell
   go test -bench=.
 ```
+
+synchronous communication (request-response model)
+Protocols:
+  - HTTP
+
+
+gRPC is an RPC framework that was created at Google. 
+gRPC uses HTTP/2 as the transport protocol and Protocol Buffers as a serialization format. 
+It provides an ability to define RPC services and generate the client and server code for the services.
+
+define a service API using the Protocol Buffers format and generate the client 
+and server gRPC code for communication with each of our services using a proto compiler.
+
+#### install protoc-gen-go-grpc
+```shell
+ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+```
+
+##### generating clients and plug them into our applications.
+```shell
+  protoc -I=api --go_out=. --go-grpc_out=. movie.proto
+```
+
+In formats such as Protocol Buffers, all fields are always optional.
+In generated code, this results in lots of fields that can have nil values.
+For an application developer, this means doing more nil checks across all applications to prevent possible panics.
+
+add some mapping logic to translate the internal data structures and their generated counterparts.
+
