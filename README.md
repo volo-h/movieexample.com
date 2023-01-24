@@ -103,3 +103,19 @@ Detailed services structure:
         model/
           rating.go
 
+#### run serveices
+```sh
+go run metadata/cmd/main.go
+  http://localhost:8081/metadata
+  http://localhost:8081/?id=1
+```
+```sh
+go run rating/cmd/main.go
+  http://localhost:8082/rating
+  http://localhost:8082/?id=1&type=2
+```
+```sh
+go run movie/cmd/main.go
+  http://localhost:8083/
+  http://localhost:8083/?id=1
+```

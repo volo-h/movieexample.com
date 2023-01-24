@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	log.Println("Starting the rating service")
+	log.Println("Starting the rating service at :8082")
 	repo := memory.New()
 	ctrl := rating.New(repo)
 	h := httphandler.New(ctrl)
