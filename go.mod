@@ -3,9 +3,14 @@ module movieexample.com
 go 1.19
 
 require (
+	github.com/golang/protobuf v1.5.2
+	github.com/hashicorp/consul/api v1.18.0
+	google.golang.org/protobuf v1.26.0
+)
+
+require (
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
 	github.com/fatih/color v1.9.0 // indirect
-	github.com/hashicorp/consul/api v1.18.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.1 // indirect
 	github.com/hashicorp/go-hclog v0.12.0 // indirect
 	github.com/hashicorp/go-immutable-radix v1.0.0 // indirect
