@@ -144,10 +144,18 @@ serializing data -------->
 ecoding ------->
        decoding <-----------
 
+schema definition language:
+  - XML
+  - YAML
+  - Apache Thrift
+  - Apache Avro
+  - Protocol Buffer  
+
 go mod tidy
 
 cd cmd/sizecompare/
 
 go run *.go
-go test -bench=.
-
+```shell
+  go test -bench=.
+```
