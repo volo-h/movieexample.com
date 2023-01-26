@@ -123,6 +123,9 @@ go run movie/cmd/main.go
 #### runs Hashicorp Consul inside Docker in development mode, exposing its ports 8500 and 8600 for local use.
 ```shell
   docker run -d -p 8500:8500 -p 8600:8600/udp --name=dev-consul consul agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
+
+  docker stop dev-consul
+  docker start dev-consul
 ```
 #### Consul web U
 http://localhost:8500/
